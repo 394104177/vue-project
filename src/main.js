@@ -19,6 +19,16 @@ import { Button } from 'mint-ui'
 
 import { Tabbar, TabItem } from 'mint-ui';
 
+import { TabContainer, TabContainerItem } from 'mint-ui';
+
+import { Cell } from 'mint-ui';
+
+Vue.component(Cell.name, Cell);
+
+Vue.component(TabContainer.name, TabContainer);
+
+Vue.component(TabContainerItem.name, TabContainerItem);
+
 Vue.component(Tabbar.name, Tabbar);
 
 Vue.component(TabItem.name, TabItem);

@@ -1,23 +1,16 @@
 <template>
-    <div>
+    <div >
+       
         <!--header-->
         <myheader></myheader>
-
+      
+       
         <!--body -->
-        <mybody></mybody>
-
+        <mybody :active='active1' ></mybody>
 
         <!--footer-->
-        <myfooter></myfooter>
-        <router-view>
-            <router-link to=""></router-link>
-            <router-link to=""></router-link>
-            <router-link to=""></router-link>
-            <router-link to=""></router-link>
-        </router-view>
-
-
-
+        <myfooter v-on:func='change' ></myfooter>
+    
     </div>
 </template>
 
@@ -28,11 +21,20 @@
 
     export default {
         data() {
-            return {}
+            return {
+
+                active1: '微信'
+
+            }
         },
         methods: {
 
+            change(data) {
+
+                this.active1 = data
+            }
         },
+
         components: {
             myheader,
             mybody,
