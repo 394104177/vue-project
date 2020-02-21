@@ -3,7 +3,6 @@ import Vue from 'vue'
 
 //配置文件中 配置 {test:/\.vue$/,use:'vue-loader'} 
 
-
 //导入路由模块
 import VueRouter from 'vue-router'
 
