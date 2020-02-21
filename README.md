@@ -54,5 +54,5 @@
 ##            4） 如果我们不知道我们需要的版本与现在最近的版本中间隔着 n 个提交，那么我们可以使用git log来查看版本库中的commit-id，找到我们需要的commit-id后，在终端中执行git reset --hard commit-id，时这个命令执行完后，运行git log -1 命令我们会发现现在版本库里最近的一版就是我们需要的那版，此时再在工作区直接修改代码，改完之后进行git add，再执行本git commit --amend命令，之后git push.
  
 
-##  new    1234
+##  new    12345
 
