@@ -49,7 +49,7 @@
 
 ##            2） 使用gitk或其他的图形界面化工具，在终端输入 gitk，回车，会弹出gitk的图形界面，在界面的左侧部分陈列着版本库中的一条条commit-id，此时选中我们需要的那一版，右键点击之后会弹出一个选择菜单，如果是在master  分支上，那么其中会有一项是 Reset master branch to here，点击这项，会弹出一个名为confirm reset的确认box，选择reset type 中的hard项，再点击OK，关闭gitk图形界面，回到终端，运行git log -1命令，发现现在版本库里最近的一次提交已经是我们希望的那一版了，此时再在工作区直接修改代码，改完之后进行git add，再执行本git commit --amend命令，之后git push.
 
- ##           3） 如果我们知道我们需要的版本与现在最近的版本中间隔着 n 个提交，那么我们可以直接使用git reset --hard HEAD～n命令，关于git reset 命令有详解，此时这个命令执行完后，运行git log -1 命令我们会发现现在版本库里最近的一版就是我们需要的那版，此时再在工作区直接修改代码，改完之后进行git add，再执行本git commit --amend命令，之后git push.
+##           3） 如果我们知道我们需要的版本与现在最近的版本中间隔着 n 个提交，那么我们可以直接使用git reset --hard HEAD～n命令，关于git reset 命令有详解，此时这个命令执行完后，运行git log -1 命令我们会发现现在版本库里最近的一版就是我们需要的那版，此时再在工作区直接修改代码，改完之后进行git add，再执行本git commit --amend命令，之后git push.
 
 ##            4） 如果我们不知道我们需要的版本与现在最近的版本中间隔着 n 个提交，那么我们可以使用git log来查看版本库中的commit-id，找到我们需要的commit-id后，在终端中执行git reset --hard commit-id，时这个命令执行完后，运行git log -1 命令我们会发现现在版本库里最近的一版就是我们需要的那版，此时再在工作区直接修改代码，改完之后进行git add，再执行本git commit --amend命令，之后git push.
  
