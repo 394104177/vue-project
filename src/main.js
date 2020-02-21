@@ -1,7 +1,7 @@
 import Vue from 'vue'
 //安装 vue-loader 解析。vue的文件  其中依赖 vue-template-compiler -D
 
-//配置文件中 配置 {test:/\.vue$/,use:'vue-loader'}
+//配置文件中 配置 {test:/\.vue$/,use:'vue-loader'} 
 
 
 //导入路由模块
