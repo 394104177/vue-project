@@ -24,9 +24,7 @@
 </template>
 
 <style scoped>
-    div {
-        padding-top: 41px;
-    }
+
 </style>
 
 <script>
