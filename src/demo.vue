@@ -2,15 +2,16 @@
     <div class="container" >
        
         <!--header-->
-        <myheader></myheader>
+         <myheader></myheader>
       
-       
+        
         <!--body -->
-        <mybody :active='active1' ></mybody>
-
+        <transition >
+        <router-view></router-view>
+        </transition>
         <!--footer-->
-        <myfooter v-on:func='change' ></myfooter>
-    
+        <myfooter></myfooter>
+    </transition>
     </div>
 </template>
 
@@ -23,28 +24,52 @@
         data() {
             return {
 
-                active1: '微信'
+
 
             }
         },
         methods: {
 
-            change(data) {
 
-                this.active1 = data
-            }
+        },
+
+        created() {
+
+
         },
 
         components: {
             myheader,
-            mybody,
+
             myfooter
         }
     }
 </script>
 
 <style scoped>
+    .mint-header.is-fixed {
+        z-index: 99;
+    }
+    
+    .v-enter {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    
+    .v-leave-to {
+        opacity: 0;
+        transform: translateX(-100%);
+        position: absolute;
+    }
+    
+    .v-enter-active,
+    .v-leave-active {
+        transition: all 0.5s ease;
+    }
+    
     .container {
-        padding-top: 41px;
+        overflow-x: hidden;
+        padding-top: 40px;
+        padding-bottom: 50px;
     }
 </style>

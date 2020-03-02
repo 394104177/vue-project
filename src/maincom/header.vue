@@ -1,14 +1,25 @@
 <template>
     <div>
-    <mt-header fixed title="巨信">
-        <router-link to="/" slot="left">
+      <mt-header title="vue购物" fixed>
+        <a  slot="left" @click.prevent="returnAbove">
           <mt-button icon="back">返回</mt-button>
-        </router-link>
+        </a>
         <mt-button icon="more" slot="right"></mt-button>
       </mt-header>
     </div>
 </template>
 
-<style></style>
+<style>
 
-<script></script>
+</style>
+
+<script>
+    export default {
+        methods: {
+            returnAbove() {
+                console.log(123)
+                this.$router.go(-1)
+            }
+        }
+    }
+</script>

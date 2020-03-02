@@ -33,7 +33,12 @@ module.exports = {
 
             { test: /\.vue$/, use: 'vue-loader' },
 
-            { test: /\.png$/, use: 'url-loader' }
+            { test: /\.png$/, use: 'url-loader' },
+
+            { test: /\.(ttf|svg|gif)$/, use: 'file-loader' }
+
+
+
         ]
     }
 }
